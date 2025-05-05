@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>orgacalculador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="main-container">
+    <section class="calculator">
+      <h2>Calculadora</h2>
+      <div class="calc-container">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+          <button onclick="addInput('7')">7</button>
+          <button onclick="addInput('8')">8</button>
+          <button onclick="addInput('9')">9</button>
+          <button onclick="addInput('/')">/</button>
+          <button onclick="addInput('4')">4</button>
+          <button onclick="addInput('5')">5</button>
+          <button onclick="addInput('6')">6</button>
+          <button onclick="addInput('*')">*</button>
+          <button onclick="addInput('1')">1</button>
+          <button onclick="addInput('2')">2</button>
+          <button onclick="addInput('3')">3</button>
+          <button onclick="addInput('-')">-</button>
+          <button onclick="addInput('0')">0</button>
+          <button onclick="addInput('.')">.</button>
+          <button onclick="calculate()">=</button>
+          <button onclick="addInput('+')">+</button>
+          <button onclick="addInput('%')">%</button>
+          <button onclick="clearDisplay()">C</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="task-list">
+      <h2>Lista de Tareas</h2>
+      <input type="text" id="taskInput" placeholder="Añadir tarea">
+      <button onclick="addTask()">Añadir</button>
+      <ul id="tasks"></ul>
+    </section>
+
+    <section class="expense-tracker">
+      <h2>Organizador de Gastos</h2>
+      <input type="number" id="initialBalance" placeholder="Saldo inicial">
+      <button onclick="setBalance()">Establecer saldo</button>
+      <div id="balance">Saldo actual: $0</div>
+      <input type="text" id="expenseName" placeholder="Nombre del gasto">
+      <input type="number" id="expenseAmount" placeholder="Monto del gasto">
+      <button onclick="addExpense()">Añadir Gasto</button>
+      <button onclick="resetExpenses()">Restablecer Gastos</button>
+      <ul id="expenses"></ul>
+    </section>
+
+    <section class="music-player">
+      <h2>Reproductor de Música</h2>
+      <select id="musicSelector" onchange="changeMusic()"></select>
+      <audio id="audioPlayer" controls autoplay loop></audio>
+    </section>
+  </div>
+  
+  <footer>
+    <p>Hecho con amor por Estela Alicia Portillo</p>
+    <p>
+      <a href="https://github.com/estelaali/orgacalculador.git" target="_blank">GitHub</a> |
+      
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

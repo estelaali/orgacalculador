@@ -1,0 +1,97 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+}
+.overlay {
+  background: rgba(127, 85, 85, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+}
+section {
+  background-color: rgba(241, 241, 241, 0.155);
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(233, 218, 218, 0.3);
+  text-align: center;
+
+}
+.calc-container, .task-list, .expense-tracker, .music-player {
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 15px;
+}
+#display {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align:left;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.buttons button, .task-list button, .expense-tracker button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+
+}
+input[type="text"], input[type="number"] {
+  width: 80%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#tasks li, #expenses li {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  color: #000;
+  text-align:left;
+}
+.music-player select {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+ul {
+  list-style: none; /* Saca los puntos de la lista */
+  padding: 0;
+}
+
+li {
+  display: flex; /* Hace que el contenido esté en fila */
+  justify-content: space-between; /* Texto a la izquierda y botón a la derecha */
+  align-items: center; /* Centra verticalmente */
+  background-color: rgba(255, 255, 255, 0.3); /* Opcional: un poco de color de fondo */
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
